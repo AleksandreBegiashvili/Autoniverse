@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoniverse", "Autoniverse\Autoniverse.csproj", "{038499E5-1A59-41EC-B0F1-0EDE91E60548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autoniverse", "Autoniverse\Autoniverse.csproj", "{038499E5-1A59-41EC-B0F1-0EDE91E60548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{80E753EE-3F69-421B-AB1D-21058130FD62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E753EE-3F69-421B-AB1D-21058130FD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E753EE-3F69-421B-AB1D-21058130FD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E753EE-3F69-421B-AB1D-21058130FD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E753EE-3F69-421B-AB1D-21058130FD62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

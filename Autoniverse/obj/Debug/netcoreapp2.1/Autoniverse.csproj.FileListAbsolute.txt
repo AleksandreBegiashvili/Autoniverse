@@ -13,3 +13,22 @@ D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorTargetAssemb
 D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.dll
 D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.pdb
 D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Data.dll
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\appsettings.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.deps.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.runtimeconfig.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.runtimeconfig.dev.json
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.dll
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.pdb
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Data.dll
+D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Data.pdb
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.csprojAssemblyReference.cache
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorAssemblyInfo.cache
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorAssemblyInfo.cs
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.AssemblyInfoInputs.cache
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.AssemblyInfo.cs
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorTargetAssemblyInfo.cache
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.csproj.CopyComplete
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.dll
+D:\My Project\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.pdb
