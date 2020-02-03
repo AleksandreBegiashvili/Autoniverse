@@ -1,0 +1,15 @@
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.deps.json
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.runtimeconfig.json
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.runtimeconfig.dev.json
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.dll
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.pdb
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.csprojAssemblyReference.cache
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.csproj.CoreCompileInputs.cache
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorAssemblyInfo.cache
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorAssemblyInfo.cs
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.AssemblyInfoInputs.cache
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.AssemblyInfo.cs
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.RazorTargetAssemblyInfo.cache
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.dll
+D:\Autoniverse\Autoniverse\obj\Debug\netcoreapp2.1\Autoniverse.pdb
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Data.dll

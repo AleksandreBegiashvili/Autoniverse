@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoniverse", "Autoniverse\Autoniverse.csproj", "{038499E5-1A59-41EC-B0F1-0EDE91E60548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{038499E5-1A59-41EC-B0F1-0EDE91E60548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{038499E5-1A59-41EC-B0F1-0EDE91E60548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{038499E5-1A59-41EC-B0F1-0EDE91E60548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E21525E6-E44F-44D7-BF90-CAC0F1B83A44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
