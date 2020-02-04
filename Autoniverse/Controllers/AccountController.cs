@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autoniverse.Helpers;
 using Data.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Autoniverse.Controllers
 {
     [Route("api/[controller]")]
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly AppSettings _appSettings;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IOptions<AppSettings> appSettings)
         {
-            this.userManager = userManager;
-            this.signManager = signManager;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _appSettings = appSettings.Value;
         }
 
         [HttpPost("action")]
@@ -33,11 +37,11 @@ namespace Autoniverse.Controllers
                 SecurityStamp = Guid.NewGuid().ToString()
             };
 
-            var result = await userManager.CreateAsync(user, model.Password);
+            var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
             {
-                await userManager.AddToRoleAsync(user, "Customer");
+                await _userManager.AddToRoleAsync(user, "Customer");
                 // Sending confirmation email
                 return Ok(new { username = user.UserName, email = user.Email, status = 1, message = "Registration Successful" });
             }
@@ -52,9 +56,23 @@ namespace Autoniverse.Controllers
 
             return BadRequest(new JsonResult(errorList));
 
+        }
 
+        // Login Method
+        [HttpPost("action")]
+        public async Task<IActionResult> Login([FromBody] LoginDTO model)
+        {
+            // Get the user from the database
+            var user = await _userManager.FindByNameAsync(model.Username);
 
+            if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
+            {
+                // Generate Token
+            }
 
+            // return error
+            ModelState.AddModelError("", "Username/Password was not found");
+            return Unauthorized();
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\My Project\\Autoniverse\\Services\\Services.csproj": {}
+    "D:\\Autoniverse\\Services\\Services.csproj": {}
   },
   "projects": {
-    "D:\\My Project\\Autoniverse\\Autoniverse\\Autoniverse.csproj": {
+    "D:\\Autoniverse\\Autoniverse\\Autoniverse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Project\\Autoniverse\\Autoniverse\\Autoniverse.csproj",
+        "projectUniqueName": "D:\\Autoniverse\\Autoniverse\\Autoniverse.csproj",
         "projectName": "Autoniverse",
-        "projectPath": "D:\\My Project\\Autoniverse\\Autoniverse\\Autoniverse.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\My Project\\Autoniverse\\Autoniverse\\obj\\",
+        "projectPath": "D:\\Autoniverse\\Autoniverse\\Autoniverse.csproj",
+        "packagesPath": "C:\\Users\\Abegiashvili\\.nuget\\packages\\",
+        "outputPath": "D:\\Autoniverse\\Autoniverse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abegiashvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "D:\\My Project\\Autoniverse\\Data\\Data.csproj": {
-                "projectPath": "D:\\My Project\\Autoniverse\\Data\\Data.csproj"
+              "D:\\Autoniverse\\Data\\Data.csproj": {
+                "projectPath": "D:\\Autoniverse\\Data\\Data.csproj"
               }
             }
           }
@@ -95,20 +95,20 @@
         }
       }
     },
-    "D:\\My Project\\Autoniverse\\Data\\Data.csproj": {
+    "D:\\Autoniverse\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Project\\Autoniverse\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\Autoniverse\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\My Project\\Autoniverse\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\My Project\\Autoniverse\\Data\\obj\\",
+        "projectPath": "D:\\Autoniverse\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Abegiashvili\\.nuget\\packages\\",
+        "outputPath": "D:\\Autoniverse\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abegiashvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -171,20 +171,20 @@
         }
       }
     },
-    "D:\\My Project\\Autoniverse\\Services\\Services.csproj": {
+    "D:\\Autoniverse\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\My Project\\Autoniverse\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\Autoniverse\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\My Project\\Autoniverse\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\My Project\\Autoniverse\\Services\\obj\\",
+        "projectPath": "D:\\Autoniverse\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Abegiashvili\\.nuget\\packages\\",
+        "outputPath": "D:\\Autoniverse\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abegiashvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -197,11 +197,11 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "D:\\My Project\\Autoniverse\\Autoniverse\\Autoniverse.csproj": {
-                "projectPath": "D:\\My Project\\Autoniverse\\Autoniverse\\Autoniverse.csproj"
+              "D:\\Autoniverse\\Autoniverse\\Autoniverse.csproj": {
+                "projectPath": "D:\\Autoniverse\\Autoniverse\\Autoniverse.csproj"
               },
-              "D:\\My Project\\Autoniverse\\Data\\Data.csproj": {
-                "projectPath": "D:\\My Project\\Autoniverse\\Data\\Data.csproj"
+              "D:\\Autoniverse\\Data\\Data.csproj": {
+                "projectPath": "D:\\Autoniverse\\Data\\Data.csproj"
               }
             }
           }
@@ -215,14 +215,6 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.1.6, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.1.14, )"
-            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
