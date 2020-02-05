@@ -1,7 +1,6 @@
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.deps.json
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.dll
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csprojAssemblyReference.cache
-D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csproj.CoreCompileInputs.cache
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfoInputs.cache
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.runtimeconfig.json
@@ -21,3 +20,11 @@ D:\My Project\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
 D:\My Project\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csproj.CopyComplete
 D:\My Project\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.dll
 D:\My Project\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.pdb
+D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.pdb
+D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
+D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csproj.CopyComplete
+D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.dll
+D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.pdb

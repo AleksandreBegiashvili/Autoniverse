@@ -18,3 +18,14 @@ D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.AssemblyInfo
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.csproj.CopyComplete
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.dll
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.pdb
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.csprojAssemblyReference.cache
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.AssemblyInfoInputs.cache
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.AssemblyInfo.cs
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.dll
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.pdb
+D:\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.deps.json
+D:\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.dll
+D:\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.pdb
+D:\Autoniverse\Services\bin\Debug\netcoreapp2.1\Data.dll
+D:\Autoniverse\Services\bin\Debug\netcoreapp2.1\Data.pdb
+D:\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.csproj.CopyComplete

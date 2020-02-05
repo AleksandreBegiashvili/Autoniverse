@@ -72,29 +72,17 @@ namespace Data.Models
         public int SellerNumber { get; set; }
 
         // Boolean properties
-        [Required]
         public bool IsValidated { get; set; }
-        [Required]
         public bool HasABS { get; set; }
-        [Required]
         public bool HasTCS { get; set; }
-        [Required]
         public bool HasAlarm { get; set; }
-        [Required]
         public bool HasElectricMirrors { get; set; }
-        [Required]
         public bool HasLeatherInterior { get; set; }
-        [Required]
         public bool HasClimateControl { get; set; }
-        [Required]
         public bool HasHesatedSeats { get; set; }
-        [Required]
         public bool HasNavigation { get; set; }
-        [Required]
         public bool HasAirConditioning { get; set; }
-        [Required]
         public bool HasParkingControl { get; set; }
-        [Required]
         public bool HasRearCamera { get; set; }
 
 

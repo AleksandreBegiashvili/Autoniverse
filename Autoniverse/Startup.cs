@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Autoniverse.Helpers;
 using Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,6 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Services.Infrastructure;
 
 namespace Autoniverse
 {
@@ -47,6 +49,9 @@ namespace Autoniverse
                 });
             });
 
+            // Enable UnitOfWork
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             // Connect to Database
             services.AddDbContext<AutoniverseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AutoniverseCS")));
 
@@ -73,12 +78,12 @@ namespace Autoniverse
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
             // Authentication middleware
-            services.AddAuthentication(o => 
+            services.AddAuthentication(o =>
             {
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 o.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
                 o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options => 
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -89,6 +94,22 @@ namespace Autoniverse
                     ValidAudience = appSettings.Audience,
                     IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
+            });
+
+            // Automapper Configuration
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoniverseMappingProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            // Configure Logging
+            services.AddLogging(cfg =>
+            {
+                cfg.AddConsole();
+                cfg.AddDebug();
             });
         }
 

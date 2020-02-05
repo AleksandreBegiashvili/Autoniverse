@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Services.Interface
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        TEntity Get(int id);
-        IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
+        Task<TEntity> GetById(int id);
+        Task<TEntity> FirstOrDefault(Expression<Func<TEntity, bool>> predicate);
+
+        // Update and Remove 
         void Add(TEntity entity);
-        void AddRange(IEnumerable<TEntity> entities);
-
+        void Update(TEntity entity);
         void Remove(TEntity entity);
-        void RemoveRange(IEnumerable<TEntity> entities);
 
+        Task<IEnumerable<TEntity>> GetAll();
+        Task<IEnumerable<TEntity>> GetWhere(Expression<Func<TEntity, bool>> predicate);
     }
 }

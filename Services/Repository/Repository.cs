@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Services.Repository
 {
@@ -17,39 +18,43 @@ namespace Services.Repository
             this.context = context;
         }
 
+
         public void Add(TEntity entity)
         {
             context.Set<TEntity>().Add(entity);
         }
 
-        public void AddRange(IEnumerable<TEntity> entities)
-        {
-            context.Set<TEntity>().AddRange(entities);
-        }
 
         public void Remove(TEntity entity)
         {
             context.Set<TEntity>().Remove(entity);
         }
 
-        public void RemoveRange(IEnumerable<TEntity> entities)
+        public void Update(TEntity entity)
         {
-            context.Set<TEntity>().RemoveRange(entities);
+            context.Entry(entity).State = EntityState.Modified;
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public Task<TEntity> FirstOrDefault(Expression<Func<TEntity, bool>> predicate)
         {
-            return context.Set<TEntity>().Where(predicate);
+            return context.Set<TEntity>().FirstOrDefaultAsync(predicate);
         }
 
-        public TEntity Get(int id)
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
-            return context.Set<TEntity>().Find(id);
+            return await context.Set<TEntity>().ToListAsync();
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public Task<TEntity> GetById(int id)
         {
-            return context.Set<TEntity>().ToList();
+            return context.Set<TEntity>().FindAsync(id);
         }
+
+        public async Task<IEnumerable<TEntity>> GetWhere(Expression<Func<TEntity, bool>> predicate)
+        {
+            return await context.Set<TEntity>().Where(predicate).ToListAsync();
+        }
+
+
     }
 }

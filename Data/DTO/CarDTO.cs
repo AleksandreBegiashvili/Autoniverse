@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Data.Models
+namespace Data.DTO
 {
-    public class Motorcycle
+    public class CarDTO
     {
         public int Id { get; set; }
 
-        public int MotorcycleCategoryId { get; set; }
-        [ForeignKey("MotorcycleCategoryId")]
-        public MotorcycleCategory MotorcycleCategory { get; set; }
+        public int CarCategoryId { get; set; }
+        [ForeignKey("CarCategoryId")]
+        public CarCategoryDTO CarCategory { get; set; }
 
         [Required]
         public string Make { get; set; }
@@ -48,6 +49,21 @@ namespace Data.Models
         public int NumberOfCylinders { get; set; }
 
         [Required]
+        public int NumberOfDoors { get; set; }
+
+        [Required]
+        public string WheelDriveType { get; set; }
+
+        [Required]
+        public string InteriorColor { get; set; }
+
+        [Required]
+        public int NumberOfAirbags { get; set; }
+
+        [Required]
+        public string SteeringWheelPosition { get; set; }
+
+        [Required]
         public string Description { get; set; }
 
         [Required]
@@ -61,9 +77,13 @@ namespace Data.Models
         public bool HasABS { get; set; }
         public bool HasTCS { get; set; }
         public bool HasAlarm { get; set; }
-        public bool HasElectricStarter { get; set; }
-        public bool HasStartStop { get; set; }
-        public bool HasLuggage { get; set; }
-        public bool HasWindshiled { get; set; }
+        public bool HasElectricMirrors { get; set; }
+        public bool HasLeatherInterior { get; set; }
+        public bool HasClimateControl { get; set; }
+        public bool HasHesatedSeats { get; set; }
+        public bool HasNavigation { get; set; }
+        public bool HasAirConditioning { get; set; }
+        public bool HasParkingControl { get; set; }
+        public bool HasRearCamera { get; set; }
     }
 }

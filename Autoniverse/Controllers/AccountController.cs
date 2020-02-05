@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using Autoniverse.Helpers;
 using Data.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Autoniverse.Controllers
 {
@@ -24,7 +28,7 @@ namespace Autoniverse.Controllers
             _appSettings = appSettings.Value;
         }
 
-        [HttpPost("action")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO model)
         {
             // Will hold all the errors related to registration
@@ -59,15 +63,47 @@ namespace Autoniverse.Controllers
         }
 
         // Login Method
-        [HttpPost("action")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Login([FromBody] LoginDTO model)
         {
             // Get the user from the database
             var user = await _userManager.FindByNameAsync(model.Username);
+            var roles = await _userManager.GetRolesAsync(user);
+            var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_appSettings.Secret));
+
+            double tokenExpiryTime = Convert.ToDouble(_appSettings.ExpireTime);
 
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
+                // Confirmation of email
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new Claim[]
+                    {
+                        new Claim(JwtRegisteredClaimNames.Sub, model.Username),
+                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                        new Claim(ClaimTypes.NameIdentifier, user.Id),
+                        new Claim(ClaimTypes.Role, roles.FirstOrDefault()),
+                        new Claim("LoggedOn", DateTime.Now.ToString())
+                    }),
+                    SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature),
+                    Issuer = _appSettings.Site,
+                    Audience = _appSettings.Audience,
+                    Expires = DateTime.UtcNow.AddMinutes(tokenExpiryTime)
+                };
                 // Generate Token
+
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                return Ok(new
+                {
+                    token = tokenHandler.WriteToken(token),
+                    expiration = token.ValidTo,
+                    username = user.UserName,
+                    userRole = roles.FirstOrDefault()
+                });
             }
 
             // return error
