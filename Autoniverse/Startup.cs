@@ -111,6 +111,21 @@ namespace Autoniverse
                 cfg.AddConsole();
                 cfg.AddDebug();
             });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireLoggedIn", policy =>
+                {
+                    policy.RequireRole("Admin", "Customer", "Moderator")
+                        .RequireAuthenticatedUser();
+                });
+
+                options.AddPolicy("RequireAdministratorRole", policy =>
+                {
+                    policy.RequireRole("Admin")
+                        .RequireAuthenticatedUser();
+                });
+            });
         }
 
 

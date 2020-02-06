@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Data.DTO;
 using Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Services.Infrastructure;
@@ -27,7 +28,10 @@ namespace Autoniverse.Controllers
         }
         
             
+        // CONTROLLER FOR GETTING ALL CARS ON THE WEBSITE
+        // THIS SHOULD BE ACCESSIBLE FOR ANY KIND OF USER WHEN FINISHED
         [HttpGet]
+        [Authorize(Policy = "RequireLoggedIn")]
         public async Task<IActionResult> GetAllCars()
         {
             var cars = await _uow.Cars.GetAll();
@@ -37,8 +41,10 @@ namespace Autoniverse.Controllers
             return Ok(carsToReturn);
         }
 
-
+        // CONTROLLER FOR ADDING A CAR ON THE WEBSITE
+        // ONLY USERS WHO ARE LOGGED IN SHOULD BE ABLE TO ADD A CAR
         [HttpPost("[action]")]
+        [Authorize(Policy = "RequireAdministratorRole")]
         public IActionResult AddCar([FromBody] CarDTO model)
         {
             var newCar = _mapper.Map<Car>(model);
@@ -52,10 +58,12 @@ namespace Autoniverse.Controllers
             return BadRequest();
         }
 
-        // UPDATE NOT WORKING BECAUSE OF SOME ID ISSUE!!! CHECK WHEN BACK
+        
 
-
+        // CONTROLLER FOR UPDATING A CAR ON THE WEBSITE
+        // ONLY USERS WHO ARE LOGGED IN SHOULD BE ABLE TO UPDATE CAR THAT BELONGS TO THEIR ACCOUNT
         [HttpPut("[action]/{id}")]
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> UpdateCar([FromRoute] int id, [FromBody] CarDTO model)
         {
             if(!ModelState.IsValid)
@@ -112,7 +120,11 @@ namespace Autoniverse.Controllers
             return BadRequest();
         }
 
+
+        // CONTROLLER FOR DELETING A CAR ON THE WEBSITE
+        // ONLY USERS WHO ARE LOGGED IN SHOULD BE ABLE TO DELETE CAR THAT BELONGS TO THEIR ACCOUNT
         [HttpDelete("[action]/{id}")]
+        [Authorize(Policy = "RequireAdministratorRole")]
         public async Task<IActionResult> DeleteCar([FromRoute] int id)
         {
             if(!ModelState.IsValid)

@@ -1,17 +1,8 @@
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\appsettings.Development.json
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\appsettings.json
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.deps.json
 D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.dll
 D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Services.pdb
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Autoniverse.dll
 D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Data.dll
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Autoniverse.pdb
 D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Data.pdb
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
-D:\My Project\Autoniverse\Services\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.csprojAssemblyReference.cache
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.AssemblyInfoInputs.cache
 D:\My Project\Autoniverse\Services\obj\Debug\netcoreapp2.1\Services.AssemblyInfo.cs

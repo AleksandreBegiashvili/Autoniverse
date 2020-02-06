@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Autoniverse\\Data\\Data.csproj": {}
+    "D:\\My Project\\Autoniverse\\Data\\Data.csproj": {}
   },
   "projects": {
-    "D:\\Autoniverse\\Data\\Data.csproj": {
+    "D:\\My Project\\Autoniverse\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Autoniverse\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\My Project\\Autoniverse\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\Autoniverse\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\Abegiashvili\\.nuget\\packages\\",
-        "outputPath": "D:\\Autoniverse\\Data\\obj\\",
+        "projectPath": "D:\\My Project\\Autoniverse\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\My Project\\Autoniverse\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Abegiashvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
