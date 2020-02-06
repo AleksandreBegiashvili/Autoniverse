@@ -71,8 +71,38 @@ namespace Autoniverse.Controllers
             }
 
             // If car was found =>
-            findCar = _mapper.Map<Car>(model);
-            findCar.Id = model.Id;
+            findCar.HasABS = model.HasABS;
+            findCar.HasAirConditioning = model.HasAirConditioning;
+            findCar.HasAlarm = model.HasAlarm;
+            findCar.HasClimateControl = model.HasClimateControl;
+            findCar.HasElectricMirrors = model.HasElectricMirrors;
+            findCar.HasHesatedSeats = model.HasHesatedSeats;
+            findCar.HasLeatherInterior = model.HasLeatherInterior;
+            findCar.HasNavigation = model.HasNavigation;
+            findCar.HasParkingControl = model.HasParkingControl;
+            findCar.HasRearCamera = model.HasRearCamera;
+            findCar.HasTCS = model.HasTCS;
+            findCar.InteriorColor = model.InteriorColor;
+            findCar.IsValidated = model.IsValidated;
+            findCar.Make = model.Make;
+            findCar.Model = model.Model;
+            findCar.NumberOfAirbags = model.NumberOfAirbags;
+            findCar.NumberOfCylinders = model.NumberOfCylinders;
+            findCar.NumberOfDoors = model.NumberOfDoors;
+            findCar.Odometer = model.Odometer;
+            findCar.Price = model.Price;
+            findCar.ProductionYear = model.ProductionYear;
+            findCar.SaleType = model.SaleType;
+            findCar.SellerName = model.SellerName;
+            findCar.SellerNumber = model.SellerNumber;
+            findCar.SteeringWheelPosition = model.SteeringWheelPosition;
+            findCar.Transmission = model.Transmission;
+            findCar.WheelDriveType = model.WheelDriveType;
+            findCar.Id = id;
+            
+            //findCar = _mapper.Map<Car>(model);
+
+            //findCar.Id =id;
 
             _uow.Cars.Update(findCar);
 

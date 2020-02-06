@@ -13,7 +13,7 @@ namespace Data.DTO
 
         public int CarCategoryId { get; set; }
         [ForeignKey("CarCategoryId")]
-        public CarCategoryDTO CarCategory { get; set; }
+        public CarCategory CarCategory { get; set; }
 
         [Required]
         public string Make { get; set; }

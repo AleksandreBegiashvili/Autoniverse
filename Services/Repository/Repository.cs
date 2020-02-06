@@ -32,7 +32,8 @@ namespace Services.Repository
 
         public void Update(TEntity entity)
         {
-            context.Entry(entity).State = EntityState.Modified;
+            context.Set<TEntity>().Update(entity);
+            //context.Entry(entity).State = EntityState.Modified;
         }
 
         public Task<TEntity> FirstOrDefault(Expression<Func<TEntity, bool>> predicate)

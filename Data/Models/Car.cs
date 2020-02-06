@@ -8,6 +8,7 @@ namespace Data.Models
 {
     public class Car
     {
+        [Key]
         public int Id { get; set; }
 
         public int CarCategoryId { get; set; }
