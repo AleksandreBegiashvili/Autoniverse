@@ -71,6 +71,7 @@ namespace Autoniverse.Controllers
             }
 
             // If car was found =>
+            #region Mapping CarDTO To Car
             findCar.HasABS = model.HasABS;
             findCar.HasAirConditioning = model.HasAirConditioning;
             findCar.HasAlarm = model.HasAlarm;
@@ -99,10 +100,7 @@ namespace Autoniverse.Controllers
             findCar.Transmission = model.Transmission;
             findCar.WheelDriveType = model.WheelDriveType;
             findCar.Id = id;
-            
-            //findCar = _mapper.Map<Car>(model);
-
-            //findCar.Id =id;
+            #endregion
 
             _uow.Cars.Update(findCar);
 
