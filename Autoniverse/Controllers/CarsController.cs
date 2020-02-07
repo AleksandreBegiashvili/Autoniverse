@@ -36,10 +36,17 @@ namespace Autoniverse.Controllers
         {
             var cars = await _uow.Cars.GetAll();
 
+            if(cars == null)
+            {
+                return NotFound();
+            }
+
             var carsToReturn = _mapper.Map<IEnumerable<CarDTO>>(cars);
 
             return Ok(carsToReturn);
         }
+
+
 
         // CONTROLLER FOR ADDING A CAR ON THE WEBSITE
         // ONLY USERS WHO ARE LOGGED IN SHOULD BE ABLE TO ADD A CAR
@@ -47,14 +54,19 @@ namespace Autoniverse.Controllers
         [Authorize(Policy = "RequireAdministratorRole")]
         public IActionResult AddCar([FromBody] CarDTO model)
         {
-            var newCar = _mapper.Map<Car>(model);
+            if(!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
+            var newCar = _mapper.Map<Car>(model);
             _uow.Cars.Add(newCar);
 
             if(_uow.Complete())
             {
                 return Ok(new JsonResult($"Car was added successfully"));
             }
+
             return BadRequest();
         }
 
