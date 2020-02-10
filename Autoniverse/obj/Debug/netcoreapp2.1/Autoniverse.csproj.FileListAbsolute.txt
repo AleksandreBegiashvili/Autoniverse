@@ -40,3 +40,4 @@ D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Services.dll
 D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Services.pdb
 D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Services.dll
 D:\My Project\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Services.pdb
+D:\Autoniverse\Autoniverse\bin\Debug\netcoreapp2.1\Autoniverse.Views.dll

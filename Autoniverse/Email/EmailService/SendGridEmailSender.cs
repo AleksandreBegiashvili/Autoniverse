@@ -9,7 +9,7 @@ using SendGrid.Helpers.Mail;
 
 namespace Autoniverse.Email.EmailService
 {
-    public class SendGridEmailSender
+    public class SendGridEmailSender : IEmailSender
     {
         private readonly AppSettings _appSettings;
 

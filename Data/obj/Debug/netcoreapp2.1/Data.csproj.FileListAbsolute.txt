@@ -1,6 +1,5 @@
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.deps.json
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.dll
-D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csprojAssemblyReference.cache
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfoInputs.cache
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
 D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Data.runtimeconfig.json

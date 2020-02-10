@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using Autoniverse.Email;
 using Autoniverse.Helpers;
 using Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -51,6 +52,8 @@ namespace Autoniverse
 
             // Enable UnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddSendGridEmailSender();
 
             // Connect to Database
             services.AddDbContext<AutoniverseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AutoniverseCS")));
@@ -144,6 +147,7 @@ namespace Autoniverse
             }
 
             app.UseCors("EnableCORS");
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseAuthentication();
 
