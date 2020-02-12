@@ -13,38 +13,38 @@ namespace Autoniverse.Controllers
     public class NotificationController : ControllerBase
     {
         [HttpGet]
-        [Produces("text/plain")]
-        public ContentResult GetEmailConfirmationPage(bool hasCredentials)
+        //[Produces("text/plain")]
+        public IActionResult GetEmailConfirmationPage(string userId, string code)
         {
-            if (hasCredentials)
-            {
 
-                string htmlContent = "<div class=\"card\">" +
-                    "<div  class=\"box\">" +
-                    " <div class=\"img\">" +
-                    "<!--<img src=\"~/ images / logo.png\">-->" +
-                    " </div>" +
-                    "<h2>Thank You<br><span>Email Confirmed</span></h2>" +
-                    "<p>" +
-                    " You can now successfuly login. You have full access to our products and services." +
-                    "</p>" +
-                    "<a class=\"btn btn-primary btn - block\" [routerLink]=\"['/login']\" >LOGIN</a>" +
-                    " </div>" +
-                    "</div>";
-                return new ContentResult
-                {
-                    ContentType = "text/html",
-                    StatusCode = (int)HttpStatusCode.OK,
-                    Content = htmlContent
-                };
-            } 
-            else
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
             {
-                return new ContentResult()
-                {
-                    StatusCode = 500
-                };
+                return BadRequest(new { EmailConfirmed = false });
+
             }
+
+            return Ok(new { EmailConfirmed = true });
+
+            //string htmlContent = "<div class=\"card\">" +
+            //    "<div  class=\"box\">" +
+            //    " <div class=\"img\">" +
+            //    "<!--<img src=\"~/ images / logo.png\">-->" +
+            //    " </div>" +
+            //    "<h2>Thank You<br><span>Email Confirmed</span></h2>" +
+            //    "<p>" +
+            //    " You can now successfuly login. You have full access to our products and services." +
+            //    "</p>" +
+            //    "<a class=\"btn btn-primary btn - block\" [routerLink]=\"['/login']\" >LOGIN</a>" +
+            //    " </div>" +
+            //    "</div>";
+
+            //return new ContentResult
+            //{
+            //    ContentType = "text/html",
+            //    StatusCode = (int)HttpStatusCode.OK,
+            //    Content = htmlContent
+            //};
+
         }
     }
 }

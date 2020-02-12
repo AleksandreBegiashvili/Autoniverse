@@ -5,8 +5,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Autoniverse.Email;
 using Autoniverse.Helpers;
 using Data.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -20,12 +22,17 @@ namespace Autoniverse.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly AppSettings _appSettings;
+        private readonly IEmailSender _emailSender;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IOptions<AppSettings> appSettings)
+        public AccountController(UserManager<IdentityUser> userManager,
+                                SignInManager<IdentityUser> signInManager,
+                                IOptions<AppSettings> appSettings,
+                                IEmailSender emailSender)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _appSettings = appSettings.Value;
+            _emailSender = emailSender;
         }
 
         [HttpPost("[action]")]
@@ -47,6 +54,10 @@ namespace Autoniverse.Controllers
             {
                 await _userManager.AddToRoleAsync(user, "Customer");
                 // Sending confirmation email
+                //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                //var callBackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, Code = code }, protocol: HttpContext.Request.Scheme);
+                //await _emailSender.SendEmailAsync(user.Email, "This is email subject","Please, confirm your email by clicking this link: <a href=\"" + callBackUrl + "\">click here</a>");
+
                 return Ok(new { username = user.UserName, email = user.Email, status = 1, message = "Registration Successful" });
             }
             else
@@ -68,7 +79,7 @@ namespace Autoniverse.Controllers
         {
             // Get the user from the database
             var user = await _userManager.FindByNameAsync(model.Username);
-            var roles = await _userManager.GetRolesAsync(user);
+            //var roles = await _userManager.GetRolesAsync(user);
             var key = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_appSettings.Secret));
 
             double tokenExpiryTime = Convert.ToDouble(_appSettings.ExpireTime);
@@ -77,6 +88,7 @@ namespace Autoniverse.Controllers
             {
                 // Confirmation of email
 
+                var roles = await _userManager.GetRolesAsync(user);
                 var tokenHandler = new JwtSecurityTokenHandler();
 
                 var tokenDescriptor = new SecurityTokenDescriptor
@@ -110,5 +122,51 @@ namespace Autoniverse.Controllers
             ModelState.AddModelError("", "Username/Password was not found");
             return Unauthorized();
         }
+
+
+        /*
+
+        [HttpGet("[action]")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ConfirmEmail(string userId, string code)
+        {
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(code))
+            {
+                ModelState.AddModelError("", "User ID and Code are required");
+                return BadRequest(ModelState);
+            }
+
+            var user = await _userManager.FindByNameAsync(userId);
+
+            if (user == null)
+            {
+                return new JsonResult("ERROR");
+            }
+
+            if (user.EmailConfirmed)
+            {
+                return Ok(new { emailConfirmed = true });
+            }
+
+            var result = await _userManager.ConfirmEmailAsync(user, code);
+
+            if (result.Succeeded)
+            {
+                return Ok(new { redirectToConfirmation = true });
+            }
+            else
+            {
+                List<string> errors = new List<string>();
+                foreach (var error in result.Errors)
+                {
+                    errors.Add(error.ToString());
+                }
+                return new JsonResult(errors);
+            }
+        }
+
+    */
+
+
     }
 }

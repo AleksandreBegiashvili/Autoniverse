@@ -27,3 +27,4 @@ D:\Autoniverse\Data\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csproj.CopyComplete
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.dll
 D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.pdb
+D:\Autoniverse\Data\obj\Debug\netcoreapp2.1\Data.csprojAssemblyReference.cache
